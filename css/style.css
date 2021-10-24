@@ -215,6 +215,10 @@ button {
   margin: 10px 15px 20px 0px;
 }
 
+.second-button {
+  margin-left: 225px;
+}
+
 textarea {
   vertical-align: top;
 }

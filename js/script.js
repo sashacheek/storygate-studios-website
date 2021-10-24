@@ -1,39 +1,50 @@
-/* <section class="comment">
-    <h4>Sasha Cheek [Dev]</h4>
-    <p class="para-comment">
-        Hello, and welcome to the forums! Share any messages you want us here at StoryGate Studios to see.
-    </p>
-</section> */
-
+// Makes a comment on the forums page
 function makeComment() {
     let username = document.getElementById("name").value;
     let comment = document.getElementById("msg").value;
 
-    console.log(username);
-    console.log(comment);
+    // Checks if the inputted username is in the usernames array
+    // If it is, is adds the comment.
+    // Else, it sends an alert telling the user to create a username first.
+    if (usernames.includes(username))
+    {
 
-    let usernameText = document.createTextNode(username);
-    let commentText = document.createTextNode(comment);
+        let usernameText = document.createTextNode(username);
+        let commentText = document.createTextNode(comment);
 
-    console.log(usernameText);
+        console.log(usernameText);
 
-    let commentUsername = document.createElement("H4")
-    commentUsername.appendChild(usernameText);
-    
-    let commentComment = document.createElement("p");
-    commentComment.className = "para-comment";
-    commentComment.appendChild(commentText);
+        let commentUsername = document.createElement("H4")
+        commentUsername.appendChild(usernameText);
+        
+        let commentComment = document.createElement("p");
+        commentComment.className = "para-comment";
+        commentComment.appendChild(commentText);
 
-    let commentSection = document.createElement("section");
-    commentSection.className = "comment";
+        let commentSection = document.createElement("section");
+        commentSection.className = "comment";
 
-    commentSection.appendChild(commentUsername);
-    commentSection.appendChild(commentComment);
+        commentSection.appendChild(commentUsername);
+        commentSection.appendChild(commentComment);
 
-    document.getElementById("forum-comments").appendChild(commentSection);
+        document.getElementById("forum-comments").appendChild(commentSection);
+    }
+    else {
+        alert("Invalid username! Please create one first");
+    }
 }
 
+// Adds the inputted username to the usernames array
+function createUsername() {
+    let newUsername = document.getElementById("give-name").value;
+    usernames.push(newUsername);
+}
 
+let usernames = ["[Dev] Sasha Cheek"];
+
+//Event listeners for both of the buttons to call the above functions
 let postButton = document.getElementById("post-button");
-
 postButton.addEventListener("click", makeComment);
+
+let createButton = document.getElementById("create-username");
+createButton.addEventListener("click", createUsername);
