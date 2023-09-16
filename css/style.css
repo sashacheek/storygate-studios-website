@@ -221,12 +221,17 @@ button {
 }
 
 .com-button {
-  float: right;
+  /* float: right; */
   margin: 10px 15px 20px 0px;
 }
 
 .second-button {
-  margin-left: 225px;
+  margin-left: 231px;
+}
+
+.com-button {
+  margin-left: 343px;
+  float: none;
 }
 
 textarea {
@@ -237,6 +242,100 @@ textarea {
   margin-bottom: 10px;
 }
 
+#msg {
+  width: 265px;
+}
+
 a:hover {
   color: #00cccc;
+}
+
+@media screen and (max-width: 650px) {
+  .header-grid {
+    display: block;
+  }
+
+  .center-logo {
+    display: none;
+  }
+  h1 {
+    margin: 0;
+    font-size: 7vw;
+  }
+
+  h2 {
+    font-size: 6vw;
+  }
+
+  .border-tag {
+    border-right: 3vw solid #447a88;
+    border-left: 3vw solid #447a88;
+    max-width: 90%;
+  }
+
+  body {
+    margin: 20px 0;
+  }
+
+  .first-home-img, .second-home-img, .first-game-img, .second-game-img {
+    display: block;
+    float: none;
+    margin: 1em auto;
+    text-align: center;
+    width: 50vw;
+    padding: 0;
+  }
+
+  p {
+    clear: both;
+  }
+
+  a {
+    font-size: 4vw;
+  }
+
+  .links-grid {
+    padding: 2vw;
+  }
+
+  .h3-box-1, .h3-box-2 {
+    text-align: center;
+    margin: 20px auto;
+    width: 60vw;
+  }
+
+  .h3-box-1 h3, .h3-box-2 h3 {
+    font-size: 5vw;
+    padding: 0px;
+  }
+
+  #msg {
+    width: 61vw;
+  }
+
+  .com-button, .second-button {
+    margin: 10px 0 0 0;
+    float: none;
+  }
+
+  .com-form {
+    padding: 20px;
+  }
+
+  .un label {
+    text-align: left;
+    width: 85px;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .socials img {
+    width: 15vw;
+  }
+
+  .about-sgs, .meet-staff, .footer, .header-grid, .first-game-para, .second-game-para, .comment {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
 }
